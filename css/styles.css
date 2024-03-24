@@ -1,8 +1,23 @@
+/* -------------- MAIN STYLES----------------------- */
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   line-height: 24px;
   background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
 }
 
 h1,
@@ -32,17 +47,24 @@ main {
   flex-grow: 1;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 .container {
   max-width: 1158px;
-  padding: 0 15px;
+  padding: 0 16px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-}
+/* ------------------------END MAIN STYLES----------------------- */
+
+/* -----------------------HEADER STYLES ---------------------- */
 
 .page-header {
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -56,39 +78,37 @@ main {
   justify-content: space-between;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.burger-button {
   padding: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border: 0;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  display: block;
+  margin: 16px 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .nav-menu {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
-.features-section .container ul {
-  display: flex;
-  gap: 24px;
-}
-
-.features-section .container li {
-  flex-basis: calc((100% - 72px) / 4);
+.address {
+  display: none;
+  font-style: normal;
 }
 
 .logospan {
   color: #2e2f42;
 }
 
-.logospan-footer {
-  color: #f4f4fd;
+.logotypetab {
+  display: none;
 }
 
 .logotype {
@@ -99,54 +119,104 @@ main {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  /* margin-right: 76px; */
 }
 
-.nav-li {
-  font-weight: 500;
-  color: #2e2f42;
-  letter-spacing: 0.02em;
-  display: block;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+
+  .ul-address {
+    gap: 40px;
+  }
+
+  .address {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 40px;
+  }
+
+  .nav-li {
+    font-weight: 500;
+    color: #2e2f42;
+    letter-spacing: 0.02em;
+    display: block;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .current {
+    color: #404bbf;
+    position: relative;
+  }
+
+  .current::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+  }
+
+  .logotype {
+    display: none;
+  }
+
+  .logotypetab {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+  }
 }
 
-.nav-li:hover,
-.nav-li:focus {
-  color: #404bbf;
-}
+@media (min-width: 1158px) {
+  .container {
+    padding: 0 15px;
+  }
 
-.current {
-  color: #404bbf;
-  position: relative;
-}
+  .logotypetab {
+    display: none;
+  }
 
-.current::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-}
+  .logotype {
+    display: flex;
+    margin-right: 76px;
+  }
 
-.address {
-  font-style: normal;
-}
+  .ul-address {
+    display: flex;
+  }
 
-.address ul {
+  .nav-li:hover,
+  .nav-li:focus {
+    color: #404bbf;
+  }
+}
+/* ------------------------END HEADER STYLES-------------------- */
+
+.features-section .container ul {
   display: flex;
-  gap: 40px;
+  gap: 24px;
 }
 
-a {
-  text-decoration: none;
+.features-section .container li {
+  flex-basis: calc((100% - 72px) / 4);
 }
 
-li {
-  list-style-type: none;
+.logospan-footer {
+  color: #f4f4fd;
 }
 
 .btn-form {
