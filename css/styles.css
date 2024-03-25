@@ -487,6 +487,117 @@ li {
 
 /* ---------------------- END SECOND SECTION STYLES------------------------------ */
 
+/* ----------------------THIRD SECTION STYLES --------------------------------- */
+
+.team {
+  background-color: #f4f4fd;
+  padding: 96px 0;
+}
+
+.teamlist {
+  background-color: #ffffff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  flex-basis: calc((1128px - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.ul-team {
+  display: flex;
+  gap: 72px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team .container {
+  max-width: 320px;
+}
+
+.second-h {
+  font-weight: 700;
+  font-size: 36px;
+  color: #2e2f42;
+  text-align: center;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.card-container {
+  padding: 32px 0;
+}
+
+.third-h-team {
+  font-weight: 500;
+  font-size: 20px;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.paragraph-team {
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  padding: 0 16px;
+  gap: 24px;
+  justify-content: center;
+}
+
+.bc-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bc-icon-svg {
+  fill: #f4f4fd;
+}
+
+@media (min-width: 768px) {
+  .team .container {
+    max-width: 768px;
+  }
+  .ul-team {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .bc-icon:hover,
+  .bc-icon:focus {
+    background-color: #404bbf;
+  }
+
+  .team .container {
+    min-width: 1158px;
+  }
+
+  .team {
+    padding: 120px 0;
+  }
+}
+
+/* ---------------------- END THIRD SECTION STYLES -------------------------------*/
+
+.card-container-p {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .logospan-footer {
   color: #f4f4fd;
 }
@@ -551,17 +662,6 @@ li {
   background-color: #404bbf;
 }
 
-.second-h {
-  font-weight: 700;
-  font-size: 36px;
-  color: #2e2f42;
-  text-align: center;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-}
-
 .paragraph-footer {
   letter-spacing: 0.02em;
   color: #f4f4fd;
@@ -575,13 +675,6 @@ li {
   font-weight: 500;
 }
 
-.social-icons {
-  display: flex;
-  padding: 0 16px;
-  gap: 24px;
-  justify-content: center;
-}
-
 .social-media {
   margin-right: auto;
 }
@@ -589,26 +682,6 @@ li {
 .social-media .social-icons {
   padding: 0;
   gap: 16px;
-}
-
-.bc-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  width: 40px;
-  height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bc-icon:hover,
-.bc-icon:focus {
-  background-color: #404bbf;
-}
-
-.bc-icon-svg {
-  fill: #f4f4fd;
 }
 
 .bc-footer-icon-svg {
@@ -632,40 +705,11 @@ li {
   background-color: #31d0aa;
 }
 
-.team {
-  background-color: #f4f4fd;
-}
-
-.teamlist {
-  background-color: #ffffff;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
-
-.team .container ul {
-  display: flex;
-  gap: 24px;
-}
-
-.team .container li {
-  flex-basis: calc((1128px - 72px) / 4);
-  border-radius: 0px 0px 4px 4px;
-}
-
 .portfolio:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.card-container {
-  padding: 32px 0;
-}
-
-.card-container-p {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-}
 .section-portfolio .container ul {
   display: flex;
   gap: 24px;
@@ -693,21 +737,6 @@ li {
 .contacts:hover,
 .contacts:focus {
   color: #404bbf;
-}
-
-.third-h-team {
-  font-weight: 500;
-  font-size: 20px;
-  color: #2e2f42;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.paragraph-team {
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 8px;
 }
 
 .third-h-portfolio {
