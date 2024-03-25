@@ -373,14 +373,119 @@ li {
 
 /* -------------------- END FIRST SECTION STYLES------------------------------ */
 
-.features-section .container ul {
-  display: flex;
-  gap: 24px;
+/* ----------------------SECOND SECTION STYLES------------------------------ */
+
+.features-section {
+  padding: 96px 0;
 }
 
-.features-section .container li {
-  flex-basis: calc((100% - 72px) / 4);
+.features-section .container {
+  max-width: 320px;
 }
+
+.ul-features {
+  display: flex;
+  /* gap: 24px; */
+  gap: 72px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.features-li {
+  flex-basis: calc((100% - 216px) / 4);
+  min-width: 288px;
+}
+
+.icon {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
+}
+
+.icon svg {
+  display: none;
+}
+
+.third-h {
+  font-weight: 500;
+  /* font-size: 20px; */
+  font-size: 36px;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  line-height: 1.11;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .ul-features {
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .features-li:nth-child(-n + 2) {
+    margin-bottom: 48px;
+  }
+
+  .features-li {
+    flex-basis: calc((100% - 72px) / 4);
+    min-width: 356px;
+  }
+
+  .third-h {
+    text-align: start;
+  }
+
+  .features-section .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .ul-features {
+    gap: 24px;
+    justify-content: flex-start;
+  }
+
+  .features-li {
+    flex-basis: calc((100% - 72px) / 4);
+    min-width: 264px;
+  }
+
+  .third-h {
+    font-size: 20px;
+  }
+
+  .features-section .container {
+    max-width: 1158px;
+  }
+
+  .features-section {
+    padding: 120px 0;
+  }
+
+  .icon,
+  .icon svg {
+    display: flex;
+  }
+
+  .paragraph {
+    font-weight: 400;
+  }
+}
+
+/* ---------------------- END SECOND SECTION STYLES------------------------------ */
 
 .logospan-footer {
   color: #f4f4fd;
@@ -457,18 +562,6 @@ li {
   margin-bottom: 72px;
 }
 
-.third-h {
-  font-weight: 500;
-  font-size: 20px;
-  color: #2e2f42;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
-
-.paragraph {
-  letter-spacing: 0.02em;
-}
-
 .paragraph-footer {
   letter-spacing: 0.02em;
   color: #f4f4fd;
@@ -480,17 +573,6 @@ li {
   color: #ffffff;
   margin-bottom: 16px;
   font-weight: 500;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  border: 1px solid #8e8f99;
-  margin-bottom: 8px;
 }
 
 .social-icons {
