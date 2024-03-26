@@ -221,35 +221,6 @@ li {
 
 /* --------------------FIRST SECTION STYLES------------------------------ */
 
-/* .section-title {
-  position: relative;
-  background-color: #2e2f42;
-  text-align: center;
-  padding: 188px 0;
-  max-width: 1440px;
-  background-color: #2e2f42;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office.jpg);
-  margin: auto;
-} */
-/* 
-.title {
-  max-width: 496px;
-  color: white;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  margin: auto;
-  margin-bottom: 48px;
-} */
-
 .section-title {
   position: relative;
   background-color: #2e2f42;
@@ -343,6 +314,11 @@ li {
 }
 
 @media (min-width: 1158px) {
+  .btn:hover,
+  .btn:focus {
+    background-color: #404bbf;
+  }
+
   .title {
     margin-bottom: 48px;
   }
@@ -690,6 +666,8 @@ li {
 
 /* ---------------------- END FOURTH SECTION STYLES -------------------------------*/
 
+/* ---------------------------------FOOTER STYLES------------------------------ */
+
 .logospan-footer {
   color: #f4f4fd;
 }
@@ -709,7 +687,9 @@ li {
   align-items: center;
   padding: 8px 24px;
   justify-content: center;
-  min-width: 165px;
+  margin: auto;
+  /* min-width: 165px; */
+  max-width: 165px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -725,6 +705,7 @@ li {
   max-height: 40px;
   background-color: transparent;
   border: 1px solid #fff;
+  opacity: 0.3;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   outline: none;
@@ -736,22 +717,8 @@ li {
 
 .subscribe-form {
   display: flex;
-  gap: 24px;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: #404bbf;
-}
-
-.btn-form-modal:hover,
-.btn-form-modal:focus {
-  background-color: #404bbf;
-}
-
-.btn-form:hover,
-.btn-form:focus {
-  background-color: #404bbf;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .paragraph-footer {
@@ -765,10 +732,7 @@ li {
   color: #ffffff;
   margin-bottom: 16px;
   font-weight: 500;
-}
-
-.social-media {
-  margin-right: auto;
+  text-align: center;
 }
 
 .social-media .social-icons {
@@ -792,15 +756,84 @@ li {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bc-icon-footer:hover,
-.bc-icon-footer:focus {
-  background-color: #31d0aa;
-}
-
 .footer {
   background-color: #2e2f42;
   color: white;
-  padding: 100px 0;
+  padding: 96px 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  max-width: 320px;
+  row-gap: 72px;
+}
+
+.footer-content-a {
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    max-width: 768px;
+    gap: 16px;
+    row-gap: 72px;
+    justify-content: flex-start;
+    padding-left: 108px;
+    padding-right: 164px;
+  }
+
+  .paragraph-footer-social {
+    text-align: start;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+  }
+  .footer-content-a {
+    text-align: start;
+  }
+}
+
+@media (min-width: 1158px) {
+  .footer {
+    padding: 120px 0;
+  }
+  .footer .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+  .footer-content {
+    margin-right: 120px;
+  }
+
+  .social-media {
+    margin-right: auto;
+  }
+
+  .form-input-footer {
+    opacity: 1;
+  }
+
+  .bc-icon-footer:hover,
+  .bc-icon-footer:focus {
+    background-color: #31d0aa;
+  }
+  .btn-form:hover,
+  .btn-form:focus {
+    background-color: #404bbf;
+  }
+}
+
+/* ---------------------------------END FOOTER STYLES------------------------------ */
+
+.btn-form-modal:hover,
+.btn-form-modal:focus {
+  background-color: #404bbf;
 }
 
 .contacts {
@@ -812,20 +845,6 @@ li {
 .contacts:hover,
 .contacts:focus {
   color: #404bbf;
-}
-
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer-content-a {
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
-.footer-content {
-  margin-right: 120px;
 }
 
 .modal-overlay {
