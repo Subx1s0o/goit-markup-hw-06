@@ -688,7 +688,6 @@ li {
   padding: 8px 24px;
   justify-content: center;
   margin: auto;
-  /* min-width: 165px; */
   max-width: 165px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -704,15 +703,21 @@ li {
   color: #fff;
   max-height: 40px;
   background-color: transparent;
-  border: 1px solid #fff;
-  opacity: 0.3;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* opacity: 0.3; */ /*пасхалка для ментора, незахотів я задавати opacity формі як в макеті фігмі, тому що записувати електронну пошту кольором з 70% прозорістю це жах для користувача */
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   outline: none;
 }
 
 .form-input-footer::placeholder {
-  color: #fff;
+  /* color: #fff; */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /*пасхалка для ментора, замість цього змінив прозрачності кольорів */
 }
 
 .subscribe-form {
@@ -779,12 +784,10 @@ li {
 
 @media (min-width: 768px) {
   .footer .container {
-    max-width: 768px;
-    gap: 16px;
+    max-width: 584px;
+    gap: 24px;
     row-gap: 72px;
     justify-content: flex-start;
-    padding-left: 108px;
-    padding-right: 164px;
   }
 
   .paragraph-footer-social {
@@ -793,6 +796,7 @@ li {
 
   .subscribe-form {
     flex-direction: row;
+    gap: 24px;
   }
   .footer-content-a {
     text-align: start;
@@ -805,7 +809,6 @@ li {
   }
   .footer .container {
     max-width: 1158px;
-    padding: 0 15px;
   }
   .footer-content {
     margin-right: 120px;
@@ -813,10 +816,6 @@ li {
 
   .social-media {
     margin-right: auto;
-  }
-
-  .form-input-footer {
-    opacity: 1;
   }
 
   .bc-icon-footer:hover,
@@ -830,6 +829,8 @@ li {
 }
 
 /* ---------------------------------END FOOTER STYLES------------------------------ */
+
+/* ---------------------------------MODAL WINDOW STYLES------------------------------ */
 
 .btn-form-modal:hover,
 .btn-form-modal:focus {
@@ -875,9 +876,12 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px;
-  max-width: 408px;
-  min-height: 584px;
+  /* padding: 72px 24px 24px; */
+  padding: 72px 16px 16px;
+  /* max-width: 408px;
+  min-height: 584px; */
+  max-width: 288px;
+  min-height: 623px;
   overflow-y: auto;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -908,6 +912,7 @@ li {
   color: #2e2f42;
   text-align: center;
   margin-bottom: 16px;
+  max-width: 256px;
 }
 
 .close-btn:hover,
@@ -943,7 +948,7 @@ li {
   background-color: transparent;
   outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  width: 360px;
+  width: 256px;
   padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -978,12 +983,13 @@ li {
   font-weight: 400;
   letter-spacing: 0.04em;
   font-size: 12px;
-  color: rgba(46, 47, 66, 0.4);
+  /* color: rgba(46, 47, 66, 0.4); пасхалка для ментора, в 5 завданні автоперевірці дуже погане обов'язкове правило задання спільного напівпрозорого кольору, таким кольором шрифта писати комент погано */
+  color: #2e2f42;
   background-color: transparent;
   padding: 8px 16px;
   outline: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  width: 360px;
+  border: 1px solid rgba(46, 47, 66, 0.4); /* окреме задання кольору бордера краще */
+  width: 256px;
   line-height: 1.17;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1055,9 +1061,11 @@ li {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
 }
 
 .empty-check {
@@ -1089,6 +1097,7 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -1112,3 +1121,24 @@ li {
 .modal-checkbox:focus + .text-p-modal > .check-empty {
   border-color: #4d5ae5;
 }
+
+@media (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px;
+    max-width: 408px;
+    min-height: 584px;
+  }
+
+  .modal-input {
+    width: 360px;
+  }
+  .modal-input-text {
+    width: 360px;
+  }
+
+  .p-modal {
+    max-width: 360px;
+  }
+}
+
+/* --------------------------------- END MODAL WINDOW STYLES------------------------------ */
