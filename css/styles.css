@@ -1162,6 +1162,8 @@ li {
 .burger-menu {
   position: absolute;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
@@ -1172,7 +1174,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 168px;
+  flex-grow: 1;
 }
 .burger-nav-li {
   font-weight: 700;
@@ -1180,8 +1182,6 @@ li {
   color: #2e2f42;
   line-height: 1.11;
   letter-spacing: 0.02em;
-
-  padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
