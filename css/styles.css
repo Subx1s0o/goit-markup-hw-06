@@ -7,14 +7,6 @@ body {
   background-color: #ffffff;
 }
 
-main {
-  flex-grow: 1;
-}
-
-/* .section {
-  padding: 120px 0;
-} */
-
 img {
   display: block;
   max-width: 100%;
@@ -70,7 +62,7 @@ li {
 }
 
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   padding: 0 16px;
   margin-left: auto;
   margin-right: auto;
@@ -136,12 +128,19 @@ li {
 }
 
 @media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   .burger-button {
     display: none;
   }
 
   .ul-address {
-    gap: 40px;
+    line-height: 1.17;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .address {
@@ -197,6 +196,7 @@ li {
 @media (min-width: 1158px) {
   .container {
     padding: 0 15px;
+    max-width: 1158px;
   }
 
   .logotypetab {
@@ -209,7 +209,8 @@ li {
   }
 
   .ul-address {
-    display: flex;
+    flex-direction: row;
+    gap: 40px;
   }
 
   .nav-li:hover,
@@ -355,20 +356,11 @@ li {
   padding: 96px 0;
 }
 
-.features-section .container {
-  max-width: 320px;
-}
-
 .ul-features {
   display: flex;
   gap: 72px;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.features-li {
-  flex-basis: calc((100% - 216px) / 4);
-  min-width: 288px;
 }
 
 .icon {
@@ -387,7 +379,7 @@ li {
 }
 
 .third-h {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   color: #2e2f42;
   letter-spacing: 0.02em;
@@ -410,20 +402,18 @@ li {
   }
 
   .features-li {
-    flex-basis: calc((100% - 72px) / 4);
-    min-width: 356px;
+    flex-basis: calc((100% - 24px) / 2);
   }
 
   .third-h {
     text-align: start;
   }
-
-  .features-section .container {
-    max-width: 768px;
-  }
 }
 
 @media (min-width: 1158px) {
+  .third-h {
+    font-weight: 500;
+  }
   .ul-features {
     gap: 24px;
     justify-content: flex-start;
@@ -431,15 +421,10 @@ li {
 
   .features-li {
     flex-basis: calc((100% - 72px) / 4);
-    min-width: 264px;
   }
 
   .third-h {
     font-size: 20px;
-  }
-
-  .features-section .container {
-    max-width: 1158px;
   }
 
   .features-section {
@@ -469,7 +454,7 @@ li {
   background-color: #ffffff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  flex-basis: calc((1128px - 72px) / 4);
+  width: 264px;
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -478,10 +463,6 @@ li {
   gap: 72px;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.team .container {
-  max-width: 320px;
 }
 
 .second-h {
@@ -538,11 +519,8 @@ li {
 }
 
 @media (min-width: 768px) {
-  .team .container {
-    max-width: 768px;
-  }
   .ul-team {
-    gap: 24px;
+    gap: 64px 24px;
   }
 }
 
@@ -550,6 +528,10 @@ li {
   .bc-icon:hover,
   .bc-icon:focus {
     background-color: #404bbf;
+  }
+
+  .teamlist {
+    flex-basis: calc((100% - 72px) / 4);
   }
 
   .team .container {
@@ -564,10 +546,6 @@ li {
 /* ---------------------- END THIRD SECTION STYLES -------------------------------*/
 
 /* ----------------------  FOURTH SECTION STYLES -------------------------------*/
-
-.section-portfolio .container {
-  max-width: 320px;
-}
 
 .section-portfolio {
   padding: 96px 0;
@@ -625,10 +603,6 @@ li {
 }
 
 @media (min-width: 768px) {
-  .section-portfolio .container {
-    max-width: 768px;
-  }
-
   .portfolio {
     flex-basis: calc((100% - 24px) / 2);
   }
@@ -641,10 +615,6 @@ li {
 @media (min-width: 1158px) {
   .section-portfolio {
     padding: 120px 0;
-  }
-
-  .section-portfolio .container {
-    max-width: 1158px;
   }
 
   .portfolio:hover .overlay {
@@ -694,7 +664,7 @@ li {
 
 .form-input-footer {
   border-radius: 4px;
-  min-width: 264px;
+  min-width: 288px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -772,7 +742,6 @@ li {
   justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
-  max-width: 320px;
   row-gap: 72px;
 }
 
@@ -790,6 +759,10 @@ li {
     justify-content: flex-start;
   }
 
+  .form-input-footer {
+    min-width: 264px;
+  }
+
   .paragraph-footer-social {
     text-align: start;
   }
@@ -804,11 +777,13 @@ li {
 }
 
 @media (min-width: 1158px) {
-  .footer {
-    padding: 120px 0;
-  }
   .footer .container {
     max-width: 1158px;
+    gap: 0;
+  }
+
+  .footer {
+    padding: 120px 0;
   }
   .footer-content {
     margin-right: 120px;
@@ -1176,6 +1151,7 @@ li {
   gap: 40px;
   flex-grow: 1;
 }
+
 .burger-nav-li {
   font-weight: 700;
   font-size: 36px;
